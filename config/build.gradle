@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'testemonico.config'
+
+dependencies {
+    implementation(
+        project(':domain'),
+        project(':usecase'),
+        project(':idgenerator.uuid'),
+        project(':repository.in_memory'),
+        project(':controller'),
+    )
+}

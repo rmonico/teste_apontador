@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.4.2.RELEASE"
+    }
+}
+
+apply plugin: 'java-library'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+ext.moduleName = 'testemonico.application.spring'
+
+dependencies {
+    implementation(
+        project(':domain'),
+        project(':usecase'),
+        project(':config'),
+        project(':controller'),
+        'org.springframework.boot:spring-boot-starter-web',
+        'com.fasterxml.jackson.core:jackson-core:2.9.5',
+    )
+}

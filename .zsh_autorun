@@ -1,0 +1,8 @@
+update_docker_container() {
+    docker build -t rmonico/teste_apontador:1.0 .
+}
+
+start_docker_container() {
+    echo Starting docker container in background....
+    docker run --expose 8080 --detach=true rmonico/teste_apontador:1.0
+}

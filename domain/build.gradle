@@ -1,0 +1,8 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'testemonico.domain'
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
