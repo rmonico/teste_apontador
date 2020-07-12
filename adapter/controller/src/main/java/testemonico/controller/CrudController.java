@@ -15,8 +15,8 @@ import static java.lang.String.format;
 
 public class CrudController<Rq, Rs, E extends Entity<I>, I> {
 
-    private final Function<Rq, E> requestToModelConverter;
-    private final Function<E, Rs> modelToResponseConverter;
+    protected final Function<Rq, E> requestToModelConverter;
+    protected final Function<E, Rs> modelToResponseConverter;
     protected final CreateEntityUseCase<E> createEntityUseCase;
     protected final UpdateEntityUseCase<E> updateEntityUseCase;
     protected final DeleteEntityUseCase<E, I> deleteEntityUseCase;

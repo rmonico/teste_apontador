@@ -7,7 +7,7 @@ public abstract class Entity<I> {
 
     private I id;
 
-    public abstract EntityBuilder toBuilder();
+    public abstract EntityBuilder<I> toBuilder();
 
     public static abstract class EntityBuilder<I> {
 

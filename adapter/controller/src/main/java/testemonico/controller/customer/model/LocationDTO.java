@@ -2,21 +2,21 @@ package testemonico.controller.customer.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import testemonico.domain.entity.Customer;
+import testemonico.domain.entity.Location;
 
 @Data
 @NoArgsConstructor
-public class CustomerDTO {
+public class LocationDTO {
     private String id;
     private String name;
 
-    public CustomerDTO(Customer request) {
+    public LocationDTO(Location request) {
         setId(request.getId());
         setName(request.getName());
     }
 
-    public static Customer toModel(CustomerDTO customerRequest) {
-        return Customer.builder()
+    public static Location toModel(LocationDTO customerRequest) {
+        return Location.builder()
                 .id(customerRequest.getId())
                 .name(customerRequest.getName())
                 .build();

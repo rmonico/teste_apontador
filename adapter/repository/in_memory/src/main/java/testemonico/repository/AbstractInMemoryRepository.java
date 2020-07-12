@@ -5,7 +5,7 @@ import testemonico.domain.entity.Entity;
 import java.util.*;
 
 public abstract class AbstractInMemoryRepository<E extends Entity<I>, I> {
-    private final Map<I, E> database = new HashMap<>();
+    protected final Map<I, E> database = new HashMap<>();
 
     public E create(E entity) {
         database.put(entity.getId(), entity);
