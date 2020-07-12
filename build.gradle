@@ -8,11 +8,12 @@ subprojects {
 	targetCompatibility = 1.11
 
 	repositories {
-		jcenter()
+		mavenCentral()
 	}
+
 	afterEvaluate {
 		repositories {
-			jcenter()
+			mavenCentral()
 		}
 
 		compileJava {
