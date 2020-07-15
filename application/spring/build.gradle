@@ -20,6 +20,6 @@ dependencies {
         project(':config'),
         project(':controller'),
         'org.springframework.boot:spring-boot-starter-web',
-        'com.fasterxml.jackson.core:jackson-core:2.9.5',
+        'com.fasterxml.jackson.core:jackson-databind:2.11.1',
     )
 }

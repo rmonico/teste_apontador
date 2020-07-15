@@ -1,7 +1,7 @@
-package testemonico.controller.customer;
+package testemonico.controller.location;
 
 import testemonico.controller.CrudController;
-import testemonico.controller.customer.model.LocationDTO;
+import testemonico.controller.location.model.LocationDTO;
 import testemonico.domain.entity.Location;
 import testemonico.usecase.base.crud.*;
 import testemonico.usecase.location.crud.FindLocationByApproximateName;

@@ -9,7 +9,7 @@ module testemonico.application.spring {
     requires spring.boot.autoconfigure;
     requires spring.context;
     requires com.fasterxml.jackson.databind;
-    requires jackson.annotations;
+    requires spring.webmvc;
 
     opens testemonico.spring.config to spring.core;
 }

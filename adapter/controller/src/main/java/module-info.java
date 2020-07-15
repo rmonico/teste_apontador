@@ -3,11 +3,7 @@ module testemonico.controller {
     requires testemonico.usecase;
     requires testemonico.domain;
 
-    exports testemonico.controller.product;
-    exports testemonico.controller.product.model;
-    exports testemonico.controller.customer;
-    exports testemonico.controller.order;
+    exports testemonico.controller.location;
     exports testemonico.controller;
-    exports testemonico.controller.customer.model;
-    exports testemonico.controller.order.model;
+    exports testemonico.controller.location.model;
 }

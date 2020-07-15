@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import testemonico.controller.customer.LocationController;
-import testemonico.controller.customer.model.LocationDTO;
+import testemonico.controller.location.LocationController;
+import testemonico.controller.location.model.LocationDTO;
 import testemonico.domain.entity.Location;
 
 import java.util.List;
