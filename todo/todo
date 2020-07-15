@@ -4,12 +4,12 @@
 - [ ] Fazer frontend #demorado
   - [ ] Ainda precisa fazer o cadastro, por enquanto vou deixar do jeito que está
 - [ ] Readme
-- [ ] Fazer docker-compose
+- [x] Fazer docker-compose
 
 
 - [x] Dockerfile do backend #rapido #opcional
 *Já tem, mas não sei se está bom*
-- [ ] Dockerfile do front #rapido #opcional
+- [x] Dockerfile do front #rapido #opcional
 - [ ] Swagger #opcional #rapido
 - [ ] Implantar graphQL #diferencial
 - [ ] Deploy em Cloud #diferencial
