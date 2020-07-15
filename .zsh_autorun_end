@@ -1,0 +1,15 @@
+_functions=($_functions "workoff")
+workoff() {
+    for _function in $_functions; do
+        echo "unsetting function $_function"
+        unset -f "$_function"
+    done
+
+    for _variable in $_variables; do
+        echo "unsetting variable $_variable"
+        unset "$_variable"
+    done
+}
+
+[ $#_functions -gt 0 ] && echo "Created functions: $_functions"
+[ $#_variables -gt 0 ] && echo "New variables: $_variables"

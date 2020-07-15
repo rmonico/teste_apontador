@@ -1,0 +1,10 @@
+instance_shasum="$(sha1sum $1)"
+
+# FIXME Quando entrar em outra pasta com .zsh_autorun vai substituir o script
+[ "$autorun_shasum" = "$instance_shasum" ] && return 1 || export autorun_shasum="$instance_shasum"
+
+echo "Loading $(basename "$(pwd)") scripts...."
+
+_functions=()
+_variables=(base_path)
+base_path="$(pwd)"
