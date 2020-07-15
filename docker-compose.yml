@@ -1,4 +1,4 @@
-version: 3.8
+version: "3.8"
 
 services:
   back:
@@ -6,10 +6,12 @@ services:
 
     build:
       context: ./backend
-      image: rmonico/teste_apontador_backend
 
     expose:
       - "8080"
+
+    ports:
+      - "8080:8080"
 
 
   front:
@@ -17,12 +19,15 @@ services:
 
     build:
       context: ./frontend
-      image: rmonico/teste_apontador_frontend
 
     volumes:
-      - '.:/app'
+      - './frontend:/app'
       - '/app/node_modules'
 
-
     ports:
-      - "4201:4200"
+      - "4200:4200"
+
+volumes:
+  frontend:
+  node_modules:
+
