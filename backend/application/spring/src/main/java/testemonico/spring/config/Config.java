@@ -22,7 +22,7 @@ public class Config {
                 config.findLocationByApproximateName());
     }
 
-    @Bean
+/*    @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -30,6 +30,6 @@ public class Config {
                 registry.addMapping("/**").allowedOrigins("http://localhost:4200");
             }
         };
-    }
+    }*/
 
 }
