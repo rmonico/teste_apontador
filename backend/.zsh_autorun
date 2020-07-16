@@ -1,8 +1,62 @@
-update_docker_container() {
-    docker build -t rmonico/teste_apontador:1.0 .
+. ../.zsh_autorun_start "$(realpath "$0")" || return 0
+
+image_name=rmonico/teste_apontador_backend
+image_tag=dev
+image_address="${image_name}:${image_tag}"
+backend_server=localhost
+container_port=8080
+
+_functions=($_functions update_docker_image start_container stop_container start_manual create_location list_locations)
+_variables=($_variables image_name image_tag image_address backend_server container_port)
+
+update_docker_image() {
+    d build -t "$image_address" "${base_path}"
 }
 
-start_docker_container() {
+start_container() {
     echo Starting docker container in background....
-    docker run --expose 8080 --detach=true rmonico/teste_apontador:1.0
+    docker run --publish $container_port --detach=true "$image_address"
 }
+
+stop_container() {
+    echo Stopping docker container....
+    docker kill $(docker ps -f ancestor="$image_address" --format={{.ID}})
+}
+
+start_manual() {
+  pushd .
+
+  cd "${base_path}"
+
+  ./gradlew bootRun
+
+  popd
+}
+
+create_location() {
+  if [ $# -ne 3 ]; then
+cat << EOF
+Usage: create_location <name> <address> <phone>
+EOF
+    return 1
+  fi
+
+  local name="$1"
+  local address="$2"
+  local phone="$3"
+
+  curl -X POST -H 'content-type: application/json' http://${backend_server}:${container_port}/api/v1/location -d "{ \"name\": \"${name}\", \"address\": \"${address}\", \"phone\": \"${phone}\" }"
+}
+
+list_locations() {
+  if [ $# -ne 0 ]; then
+cat << EOF
+  This function doesn't get any parameter.
+EOF
+  return 1
+  fi
+
+  curl -X GET -H 'content-type: application/json' http://${backend_server}:${container_port}/api/v1/location
+}
+
+. ../.zsh_autorun_end "$(realpath "$0")" 

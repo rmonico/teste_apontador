@@ -1,4 +1,5 @@
 _functions=($_functions "workoff")
+
 workoff() {
     for _function in $_functions; do
         echo "unsetting function $_function"

@@ -1,0 +1,7 @@
+./.zsh_autorun_start "$(realpath "$0")" || return 0
+
+start_compose() {
+  docker-compose -f "$base_path"/docker-compose up -d
+}
+
+./.zsh_autorun_end "$(realpath "$0")" 

@@ -1,18 +1,18 @@
 # Teste apontador
 
 - [x] Backend
-- [ ] Fazer frontend #demorado
+- [x] Fazer frontend #demorado
   - [ ] Ainda precisa fazer o cadastro, por enquanto vou deixar do jeito que está
-- [ ] Readme
+- [x] Readme
 - [x] Fazer docker-compose
 
 
 - [x] Dockerfile do backend #rapido #opcional
-*Já tem, mas não sei se está bom*
 - [x] Dockerfile do front #rapido #opcional
 - [ ] Swagger #opcional #rapido
 - [ ] Implantar graphQL #diferencial
 - [ ] Deploy em Cloud #diferencial
+*quase*
 
 
 - [ ] Fazer persistência em Mongo #opcional
